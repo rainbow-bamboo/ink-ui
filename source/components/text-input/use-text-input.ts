@@ -85,9 +85,13 @@ export const useTextInput = ({
 				key.upArrow ||
 				key.downArrow ||
 				(key.ctrl && input === 'c') ||
-				key.tab ||
 				(key.shift && key.tab)
 			) {
+				return;
+			}
+
+			if (key.tab) {
+				state.submit();
 				return;
 			}
 
