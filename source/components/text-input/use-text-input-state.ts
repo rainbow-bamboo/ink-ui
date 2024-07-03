@@ -176,7 +176,6 @@ export const useTextInputState = ({
 	const submit = useCallback(() => {
 		if (suggestion) {
 			insert(suggestion);
-			onSubmit?.(state.value + suggestion);
 			return;
 		}
 
